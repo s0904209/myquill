@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>this is quill test</title>
+
+<!-- Include the Quill library -->
+<script src="//cdn.quilljs.com/0.20.1/quill.js"></script>
+<script src="quill.js"></script>
+<!--<link rel="stylesheet" href="quill.snow.css"> -->
+
+<link href="http://cdn.quilljs.com/latest/quill.snow.css" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- Create the toolbar container -->
+<div id="toolbar">
+  <button class="ql-bold">Bold</button>
+  <button class="ql-italic">Italic</button>
+</div>
+
+
+
+<!-- Create the editor container -->
+<div id="editor" style="border:1px solid">
+  <div>Hello World!</div>
+  <div>Some initial <b>bold</b> text</div>
+  <div><br></div>
+</div>
+
+
+
+<!-- Initialize Quill editor -->
+<script>
+  // var quill = new Quill('#editor');
+  // quill.addModule('toolbar', { container: '#toolbar' });
+
+
+// var quill = new Quill('#editor', {
+//   modules: { toolbar: options }
+// });
+
+ // var quill = new Quill('#editor');
+ // quill.addModule('toolbar', { container: '#toolbar' });
+
+ // var quill = new Quill('#editor', {
+ //  theme: 'snow'
+ // });
+
+var fullEditor = new Quill('#editor', {
+  modules: {
+    'authorship': { authorId: 'galadriel', enabled: true },
+    'multi-cursor': true,
+    'toolbar': { container: '#toolbar' },
+    'link-tooltip': true
+  },
+  theme: 'snow'
+});
+
+
+  // var editor = new Quill('#editor', {
+  //   modules: { toolbar: '#toolbar' },
+  //   theme: 'snow'
+  // });
+</script>
+
+<script src="http://cdn.quilljs.com/latest/quill.js"></script>
+<!--<script>
+  // quill.on('text-change', function(delta, source) {
+  //   console.log('Editor contents have changed', delta);
+  //   console.log('allen quill='+quill.getText());
+  //   console.log('allen html='+quill.getHTML());
+  // });
+
+  // quill.insertText(11, ' Bilbo');
+  // console.log('allen='+quill.getText());   // Should output "Hello World Bilbo!\nSome initial bold text";
+</script>
+-->
+
+</body>
+</html>
+
+
+
